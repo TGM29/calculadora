@@ -1,40 +1,23 @@
-import tkinter as tk
+from tkinter import *
 
+x = []
 
 # Definindo calculadora e suas operacoes
-class calculadora:
 
-    def soma(x, y):
-        resultado = x + y
-        return resultado
-
-    def subtracao(x, y):
-        resultado = x - y
-        return resultado
-
-    def divisao(x, y):
-        resultado = x / y
-        return resultado
-
-    def multiplicacao(x, y):
-        resultado = x * y
-        return resultado
-
-
-tela = tk.Tk()
-
-label1 = tk.Label(tela, text="Bem vindo a calculadora")
-label1.grid(column=0, row=0)
-
-
-def botao():
+def button_add():
     i = 0
-    for i in range(11):
-        botao = tk.Button(tela, text=f"{i}")
-        botao.grid(column=i + 1, row=2)
+    for i in range (10):
+        button = Button(tela,text=i, padx =40, pady =40)
+        button.grid(row = 0, column=i )
         i = i + 1
+    buttonClear = Button(tela,text=i, padx =40, pady =40)
+    button.grid(row=0, column=i)
 
 
-botao()
+tela = Tk()
+
+button_add()
+
+
 tela.mainloop()
 
